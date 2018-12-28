@@ -20,6 +20,15 @@ minikube config set vm-driver kvm2
 minikube start --cpus 4 --memory 8096 --disk-size=40g
 minikube addons enable ingress
 ```
+Effect of enabling ingress (takes about 5 mins)
+```
+$ curl $(minikube ip)
+curl: (7) Failed to connect to 192.168.39.188 port 80: Connection refused
+$ minikube addons enable ingress
+ingress was successfully enabled
+$ curl $(minikube ip)
+default backend - 404
+```
 ```
 KFAPP=kubeflow-lab
 kfctl init ${KFAPP} --platform minikube
