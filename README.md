@@ -55,7 +55,7 @@ Replace `<minikube ip>`
 sudo service nginx reload
 curl <server-ip>
 ```
-### Setup ingress
+### Setup ingress and check
 ```
 kubectl create -f https://raw.githubusercontent.com/azmikamis/minikube-kubeflow-poc/master/kubeflow-ingress.yaml
 curl <server-ip>
