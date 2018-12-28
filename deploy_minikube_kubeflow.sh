@@ -3,6 +3,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install libvirt-bin qemu-kvm -y
 
 sudo usermod -aG libvirtd $(whoami)
+newgrp libvirtd
 
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
@@ -33,6 +34,7 @@ sudo mv /tmp/${KSFILE_VER}/ks /usr/local/bin/
 rm -rf /tmp/${KSFILE_VER}
 rm /tmp/${KSFILE_VER}.tar.gz
 
+minikube config set WantReportErrorPrompt false
 minikube config set vm-driver kvm2
 minikube start --cpus 4 --memory 8096 --disk-size=40g
 minikube addons enable ingress
