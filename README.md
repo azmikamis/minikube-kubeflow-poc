@@ -24,11 +24,11 @@ minikube addons enable ingress
 ```
 Effect of enabling ingress (takes about 5 mins)
 ```
-$ curl $(minikube ip)
+curl $(minikube ip)
 curl: (7) Failed to connect to 192.168.39.188 port 80: Connection refused
-$ minikube addons enable ingress
+minikube addons enable ingress
 ingress was successfully enabled
-$ curl $(minikube ip)
+curl $(minikube ip)
 default backend - 404
 ```
 ## Install `kubeflow`
@@ -38,4 +38,10 @@ kfctl init ${KFAPP} --platform minikube
 cd ${KFAPP}
 kfctl generate all
 kfctl apply all
+```
+## Install `nginx` and check
+```
+sudo apt install nginx -y
+service nginx status
+curl <server-ip>
 ```
