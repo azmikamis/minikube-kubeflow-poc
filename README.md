@@ -45,3 +45,10 @@ sudo apt install nginx -y
 service nginx status
 curl <server-ip>
 ```
+### Configure `nginx`
+```
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default_bak
+sudo wget https://raw.githubusercontent.com/azmikamis/minikube-kubeflow-poc/master/default -O /etc/nginx/sites-available/default
+```
+Replace `<minikube ip>`
+
