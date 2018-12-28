@@ -61,5 +61,5 @@ kubectl create -f https://raw.githubusercontent.com/azmikamis/minikube-kubeflow-
 curl <server-ip>
 ```
 ###
-http://<server-ip>/
-http://<server-ip>/ambassador/v0/diag/
+- http://server-ip/
+- http://server-ip/ambassador/v0/diag/
