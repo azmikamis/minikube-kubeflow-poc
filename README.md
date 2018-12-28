@@ -10,6 +10,7 @@ gcloud compute instances create minikube \
 ```
 curl https://raw.githubusercontent.com/azmikamis/minikube-kubeflow-poc/master/setup_tools.sh | bash
 ```
+Log out and log back in for group membership to be re-evaluated
 ```
 export PATH=${PATH}:${HOME}/src/kubeflow/scripts/
 ```
