@@ -60,3 +60,6 @@ curl <server-ip>
 kubectl create -f https://raw.githubusercontent.com/azmikamis/minikube-kubeflow-poc/master/kubeflow-ingress.yaml
 curl <server-ip>
 ```
+###
+http://<server-ip>/
+http://<server-ip>/ambassador/v0/diag/
