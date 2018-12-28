@@ -10,3 +10,19 @@ gcloud compute instances create minikube \
 ```
 curl https://raw.githubusercontent.com/azmikamis/minikube-kubeflow-poc/master/deploy_minikube_kubeflow.sh | bash
 ```
+```
+export PATH=${PATH}:${KUBEFLOW_SRC}/scripts/
+```
+```
+minikube config set WantReportErrorPrompt false
+minikube config set vm-driver kvm2
+minikube start --cpus 4 --memory 8096 --disk-size=40g
+minikube addons enable ingress
+```
+```
+KFAPP=kubeflow-lab
+kfctl init ${KFAPP} --platform minikube
+cd ${KFAPP}
+kfctl generate all
+kfctl apply all
+```
