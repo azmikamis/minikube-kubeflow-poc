@@ -7,6 +7,7 @@ gcloud compute instances create minikube \
   --boot-disk-size=60GB \
   --tags=http-server,https-server
 ```
+## Install `minikube` on `kvm`, `kubectl`, `kfctl`, `ksonnet`
 ```
 curl https://raw.githubusercontent.com/azmikamis/minikube-kubeflow-poc/master/setup_tools.sh | bash
 ```
@@ -14,6 +15,7 @@ Log out and log back in for group membership to be re-evaluated
 ```
 export PATH=${PATH}:${HOME}/src/kubeflow/scripts/
 ```
+## Start `minikube`
 ```
 minikube config set WantReportErrorPrompt false
 minikube config set vm-driver kvm2
@@ -29,6 +31,7 @@ ingress was successfully enabled
 $ curl $(minikube ip)
 default backend - 404
 ```
+## Install `kubeflow`
 ```
 KFAPP=kubeflow-lab
 kfctl init ${KFAPP} --platform minikube
