@@ -8,7 +8,7 @@ gcloud compute instances create minikube \
   --tags=http-server,https-server
 ```
 ```
-curl https://raw.githubusercontent.com/azmikamis/minikube-kubeflow-poc/master/deploy_minikube_kubeflow.sh | bash
+curl https://raw.githubusercontent.com/azmikamis/minikube-kubeflow-poc/master/setup_tools.sh | bash
 ```
 ```
 export PATH=${PATH}:${HOME}/src/kubeflow/scripts/
