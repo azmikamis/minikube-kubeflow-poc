@@ -51,4 +51,6 @@ sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default_ba
 sudo wget https://raw.githubusercontent.com/azmikamis/minikube-kubeflow-poc/master/default -O /etc/nginx/sites-available/default
 ```
 Replace `<minikube ip>`
-
+```
+sudo service nginx reload
+```
