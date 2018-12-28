@@ -11,7 +11,7 @@ gcloud compute instances create minikube \
 curl https://raw.githubusercontent.com/azmikamis/minikube-kubeflow-poc/master/deploy_minikube_kubeflow.sh | bash
 ```
 ```
-export PATH=${PATH}:${KUBEFLOW_SRC}/scripts/
+export PATH=${PATH}:${HOME}/src/kubeflow/scripts/
 ```
 ```
 minikube config set WantReportErrorPrompt false
