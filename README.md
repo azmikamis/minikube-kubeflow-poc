@@ -7,22 +7,13 @@ gcloud compute instances create minikube \
   --boot-disk-size=60GB \
   --tags=http-server,https-server
 ```
-## Install `minikube` on `kvm`, `kubectl`, `kfctl`, `ksonnet`
+## Install `minikube` on `kvm`, `kubectl`, `kfctl`, `ksonnet`, `kubectx`, `kubens`
 ```
 curl https://raw.githubusercontent.com/azmikamis/minikube-kubeflow-poc/master/setup_tools.sh | bash
 ```
 Log out and log back in for group membership to be re-evaluated
 ```
 export PATH=${PATH}:${HOME}/src/kubeflow/scripts/
-```
-## Install `kubectx`, `kubens`
-```
-wget https://raw.githubusercontent.com/ahmetb/kubectx/master/kubectx
-wget https://raw.githubusercontent.com/ahmetb/kubectx/master/kubens
-chmod +x kubectx
-chmod +x kubens
-sudo mv kubectx /usr/local/bin/
-sudo mv kubens /usr/local/bin/
 ```
 ## Start `minikube`
 ```
