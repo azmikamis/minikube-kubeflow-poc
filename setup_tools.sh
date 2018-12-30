@@ -30,3 +30,10 @@ tar -xvf /tmp/${KSFILE_VER}.tar.gz -C /tmp
 sudo mv /tmp/${KSFILE_VER}/ks /usr/local/bin/
 rm -rf /tmp/${KSFILE_VER}
 rm /tmp/${KSFILE_VER}.tar.gz
+
+wget https://raw.githubusercontent.com/ahmetb/kubectx/master/kubectx
+wget https://raw.githubusercontent.com/ahmetb/kubectx/master/kubens
+chmod +x kubectx
+chmod +x kubens
+sudo mv kubectx /usr/local/bin/
+sudo mv kubens /usr/local/bin/
